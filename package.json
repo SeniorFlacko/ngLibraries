@@ -7,12 +7,24 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-angular-rating": "ng build angular-rating",
+    "watch-angular-rating": "ng build angular-rating --watch",
+    "build-angular-console-logger": "ng build angular-console-logger",
+    "lint-angular-rating": "ng lint angular-rating",
+    "lint-angular-rating:fix": "ng lint angular-rating --fix",
+    "lint-angular-console-logger": "ng lint angular-console-logger",
+    "lint-angular-console-logger:fix": "ng lint angular-console-logger --fix",
+    "lint-all-libs": "npm run lint-angular-rating && lint-angular-console-logger",
+    "test-angular-rating": "ng test angular-rating --browsers=ChromeHeadless",
+    "test-angular-console-logger": "ng test angular-console-logger --browsers=ChromeHeadless",
+    "pack-angular-logger": "cd dist/angular-console-logger && npm pack",
+    "pack-angular-rating": "cd dist/angular-rating && npm pack"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.4",
-    "@angular/common": "~8.2.4",
+    "@angular/common": "~8.2.5",
     "@angular/compiler": "~8.2.4",
     "@angular/core": "~8.2.4",
     "@angular/forms": "~8.2.4",
@@ -25,6 +37,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.3",
+    "@angular-devkit/build-ng-packagr": "~0.803.3",
     "@angular/cli": "~8.3.3",
     "@angular/compiler-cli": "~8.2.4",
     "@angular/language-service": "~8.2.4",
@@ -39,8 +52,10 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^5.4.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   }
